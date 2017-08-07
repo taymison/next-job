@@ -11,6 +11,10 @@ class VacanciesTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Vacancy::class, 50)->create();
+        factory(App\Vacancy::class, 50)->create()->each(function (App\Vacancy $vacancy) {
+            $count = rand(0, 5);
+
+            $vacancy->benefits()->attach(App\Benefit::inRandomOrder()->take($count)->get());
+        });
     }
 }

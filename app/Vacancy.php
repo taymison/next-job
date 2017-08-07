@@ -19,4 +19,9 @@ class Vacancy extends Model
     {
         return $this->belongsTo('App\Company');
     }
+
+    public function benefits()
+    {
+        return $this->belongsToMany('App\Benefit');
+    }
 }
