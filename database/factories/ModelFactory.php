@@ -53,3 +53,9 @@ $factory->define(App\Benefit::class, function (Faker\Generator $faker) {
         'name' => $faker->word()
     ];
 });
+
+$factory->define(App\Skill::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->word()
+    ];
+});

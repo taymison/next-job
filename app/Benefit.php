@@ -15,4 +15,14 @@ class Benefit extends Model
     {
         return $this->belongsToMany('App\Vacancy');
     }
+
+    public function vacanciesRequirements()
+    {
+        return $this->belongsToMany('App\Vacancy', 'requirements');
+    }
+
+    public function vacanciesDifferentials()
+    {
+        return $this->belongsToMany('App\Vacancy', 'differentials');
+    }
 }

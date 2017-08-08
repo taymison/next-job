@@ -24,4 +24,14 @@ class Vacancy extends Model
     {
         return $this->belongsToMany('App\Benefit');
     }
+
+    public function requirements()
+    {
+        return $this->belongsToMany('App\Skill', 'requirements');
+    }
+
+    public function differentials()
+    {
+        return $this->belongsToMany('App\Skill', 'differentials');
+    }
 }
