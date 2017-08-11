@@ -1,0 +1,99 @@
+.option {
+  background-color: #FFFFFF;
+  box-shadow:       0 2px 4px #515050;
+  height:           135px;
+  margin-bottom:    1rem;
+  margin-top:       1rem;
+  position:         relative;
+  transition:       .5s transform ease-out;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+
+  @include atMedium {
+    height: 400px;
+    margin: 0 1rem;
+
+    &:hover {
+      box-shadow: 0 10px 20px #515050;
+      transform: scale($option-size-on-hover);
+    }
+
+    &:first-of-type {
+      margin-left: 2rem;
+    }
+
+    &:last-of-type {
+      margin-right: 2rem;
+    }
+
+    &--skewed {
+      transform: skewX($option-skewed);
+
+      &:hover {
+        transform: scale($option-size-on-hover) skew($option-skewed);
+      }
+    }
+  }
+
+  @include atLarge {
+
+    &--skewed {
+      transform: skewX($option-skewed -1);
+
+      &:hover {
+        transform: scale($option-size-on-hover) skew($option-skewed -1);
+      }
+    }
+  }
+
+  &__coming-soon {
+    background-color: rgba(0, 0, 0, .75);
+    height:           100%;
+    position:         relative;
+    width:            100%;
+    z-index:          1;
+
+    & p {
+      color:       #FFFFFF;
+      font-size:   1.5rem;
+      font-weight: 600;
+      left:        50%;
+      margin:      0;
+      position:    absolute;
+      top:         50%;
+      text-align:  center;
+      transform:   translate(-50%, -65%);
+    }
+  }
+
+  &__icon {
+    left:      50%;
+    position:  absolute;
+    top:       50%;
+    transform: translateY(-75%) translateX(-50%);
+    width:     50px;
+
+    @include atMedium {
+      width: 100px;
+    }
+  }
+
+  &__text {
+    bottom:      0;
+    font-weight: 600;
+    position:    absolute;
+    text-align:  center;
+    width:       100%;
+
+    @include atMedium {
+      font-size: 1.25rem;
+    }
+
+    & a {
+      color:           $dark-green;
+      text-decoration: none;
+    }
+  }
+}

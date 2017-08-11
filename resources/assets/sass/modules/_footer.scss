@@ -1,0 +1,29 @@
+.footer {
+  background-color: $dark-green;
+  position:         absolute;
+  width:            100%;
+
+  @include atMedium {
+    bottom: 0;
+  }
+
+  &__text {
+    font-weight: 300;
+    text-align:  center;
+
+    a {
+      color: #FFFFFF;
+      text-decoration: none;
+
+      &:hover .footer__heart-symbol {
+        color: #FF0000;
+      }
+    }
+  }
+
+  &__heart-symbol {
+    padding-left:  2px;
+    padding-right: 2px;
+    transition:    .5s color;
+  }
+}
