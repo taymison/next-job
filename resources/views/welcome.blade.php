@@ -9,9 +9,11 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
     </head>
     <body>
-        <div class="logo logo--centered">Next Job</div>
-        <div class="row">
-            <div class="row__col option">
+        <header>
+            <div class="logo logo--centered">Next Job</div>
+        </header>
+        <div class="row wrapper">
+            <div class="row__col option option--skewed">
                 <a href="#">
                     <img class="option__icon" src="{{ asset('img/icons/add.svg') }}" alt="New vacancy">
                 </a>
@@ -19,7 +21,7 @@
                     <a href="#">New vacancy</a>
                 </p>
             </div>
-            <div class="row__col option">
+            <div class="row__col option option--skewed">
                 <a href="#">
                     <img class="option__icon" src="{{ asset('img/icons/list.svg') }}" alt="Vacancies">
                 </a>
@@ -27,7 +29,7 @@
                     <a href="#">Vacancies</a>
                 </p>
             </div>
-            <div class="row__col option">
+            <div class="row__col option option--skewed">
                 <div class="option__coming-soon">
                     <p>Coming soon</p>
                 </div>
@@ -39,6 +41,13 @@
                 </p>
             </div>
         </div>
+        <footer class="footer">
+            <div class="wrapper">
+                <p class="footer__text">
+                    <a href="https://github.com/taymison" target="_blank">Created with <span class="footer__heart-symbol">❤</span> by Taymison</a>
+                </p>
+            </div>
+        </footer>
         <script src="{{ asset('js/app.js') }}"></script>
     </body>
 </html>
