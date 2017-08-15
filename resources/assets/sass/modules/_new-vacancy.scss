@@ -1,0 +1,27 @@
+.new-vacancy {
+
+  &__companies-not-exist {
+    display: none;
+  }
+
+  &__form-control {
+    background-color: #FFFFFF;
+    border:           solid 1px $dark-green;
+    display:          block;
+    padding:          6px 12px;
+    width:            100%;
+    
+    &[type="button"] {
+      cursor: pointer;
+    }
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: .25rem;
+  }
+
+  &__title {
+    text-align: center;
+  }
+}

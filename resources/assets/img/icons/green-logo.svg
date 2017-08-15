@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="33.024624mm"
+   height="15.931958mm"
+   viewBox="0 0 117.01638 56.45182"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="black-logo.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="5.6568543"
+     inkscape:cx="28.576178"
+     inkscape:cy="28.333817"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1360"
+     inkscape:window-height="735"
+     inkscape:window-x="1366"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:snap-page="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0">
+    <sodipodi:guide
+       position="7.9887916,28.485136"
+       orientation="0,1"
+       id="guide3369" />
+    <sodipodi:guide
+       position="82.643105,32.880465"
+       orientation="1,0"
+       id="guide3390" />
+    <sodipodi:guide
+       position="82.643105,24.395184"
+       orientation="1,0"
+       id="guide3392" />
+    <sodipodi:guide
+       position="81.96875,44.859375"
+       orientation="1,0"
+       id="guide3394" />
+    <sodipodi:guide
+       position="85.294755,24.792931"
+       orientation="1,0"
+       id="guide3396" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-176.74286,-371.7107)">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40.00103378px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#008500;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       x="174.10773"
+       y="399.24054"
+       id="text3336"
+       sodipodi:linespacing="125%"
+       transform="scale(1.0000258,0.99997419)"><tspan
+         sodipodi:role="line"
+         id="tspan3338"
+         x="174.10773"
+         y="399.24054">Next</tspan><tspan
+         sodipodi:role="line"
+         x="174.10773"
+         y="449.24182"
+         id="tspan3340" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40.96802521px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#008500;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       x="171.9265"
+       y="438.12427"
+       id="text3342"
+       sodipodi:linespacing="125%"
+       transform="scale(1.0242007,0.97637116)"><tspan
+         sodipodi:role="line"
+         id="tspan3344"
+         x="171.9265"
+         y="438.12427">JOB</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#008500;stroke-width:1.446;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 82.302734 10.560547 L 82.296875 44.322266 L 115.45508 27.982422 L 82.302734 10.560547 z "
+       id="path3352"
+       transform="translate(176.74286,371.7107)" />
+  </g>
+</svg>

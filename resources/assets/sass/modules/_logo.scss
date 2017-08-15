@@ -1,14 +1,32 @@
 .logo {
-  background-image:    url("../img/icons/white-logo.svg");
-  background-position: 0 0;
-  background-repeat:   no-repeat;
-  background-size:     100%;
-  height:              150px / $logo-proportion;
-  text-indent:         -9999px;
-  width:               150px;
+  background:      url("../img/icons/white-logo.svg") no-repeat 0 0;
+  background-size: 100%;
+  height:          150px / $logo-proportion;
+  text-indent:     -9999px;
+  width:           150px;
 
+  &--black {
+    background-image: url("../img/icons/green-logo.svg");
+  }
+  
   &--centered {
-    display: block;
-    margin: 2rem auto;
+    display:      block;
+    margin-left:  auto;
+    margin-right: auto;
+
+    &-until-small {
+      @extend .logo--centered;
+
+      @include atSmall {
+        display:      inline-block;
+        margin-left:  unset;
+        margin-right: unset;
+      }
+    }
+  }
+
+  &--small {
+    height: 100px / $logo-proportion;
+    width:  100px;
   }
 }
