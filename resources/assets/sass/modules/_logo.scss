@@ -1,11 +1,12 @@
 .logo {
   background:      url("../img/icons/white-logo.svg") no-repeat 0 0;
   background-size: 100%;
+  display:         inline-block;
   height:          150px / $logo-proportion;
   text-indent:     -9999px;
   width:           150px;
 
-  &--black {
+  &--green {
     background-image: url("../img/icons/green-logo.svg");
   }
   
@@ -13,16 +14,6 @@
     display:      block;
     margin-left:  auto;
     margin-right: auto;
-
-    &-until-small {
-      @extend .logo--centered;
-
-      @include atSmall {
-        display:      inline-block;
-        margin-left:  unset;
-        margin-right: unset;
-      }
-    }
   }
 
   &--small {

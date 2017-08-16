@@ -73,31 +73,13 @@ module.exports = __webpack_require__(3);
 
 /***/ }),
 /* 1 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, __webpack_exports__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_Test__ = __webpack_require__(2);
-
-
-new __WEBPACK_IMPORTED_MODULE_0__modules_Test__["a" /* default */]();
+throw new Error("Module build failed: Error: ENOENT: no such file or directory, open '/media/taymison/Taymison/PHP/Next Job/next-job/resources/assets/js/app.js'\n    at Error (native)");
 
 /***/ }),
-/* 2 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var Test = function Test() {
-    _classCallCheck(this, Test);
-
-    console.log("Olá Taymison som qualidade e sincronia");
-};
-
-/* harmony default export */ __webpack_exports__["a"] = (Test);
-
-/***/ }),
+/* 2 */,
 /* 3 */
 /***/ (function(module, exports) {
 

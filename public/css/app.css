@@ -512,28 +512,20 @@ body {
 .logo {
   background: url(/fonts/white-logo.svg?f4d7a4669db0722ab7dbe1a1340b9081) no-repeat 0 0;
   background-size: 100%;
+  display: inline-block;
   height: 71.79472452px;
   text-indent: -9999px;
   width: 150px;
 }
 
-.logo--black {
+.logo--green {
   background-image: url(/fonts/green-logo.svg?241c3ef49ccff55d3e03afbeaf8b4e90);
 }
 
-.logo--centered,
-.logo--centered-until-small {
+.logo--centered {
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
-
-@media (min-width: 530px) {
-  .logo--centered-until-small {
-    display: inline-block;
-    margin-left: unset;
-    margin-right: unset;
-  }
 }
 
 .logo--small {
@@ -717,6 +709,11 @@ body {
     padding-left: 5rem;
     padding-right: 5rem;
   }
+
+  .wrapper--large-padding {
+    padding-left: 15rem;
+    padding-right: 15rem;
+  }
 }
 
 .footer {
@@ -763,25 +760,37 @@ body {
   padding-bottom: 2rem;
 }
 
+.header__menu-icon {
+  float: right;
+  padding-bottom: .25rem;
+  padding-top: .25rem;
+  width: 40px;
+}
+
 .new-vacancy__companies-not-exist {
   display: none;
 }
 
 .new-vacancy__form-control {
   background-color: #FFFFFF;
-  border: solid 1px #008500;
+  border: none;
+  -webkit-box-shadow: 0 1px 1px #008500;
+          box-shadow: 0 1px 1px #008500;
   display: block;
   padding: 6px 12px;
   width: 100%;
 }
 
 .new-vacancy__form-control[type="button"] {
+  color: #000000;
   cursor: pointer;
+  text-align: center;
+  text-decoration: none;
 }
 
 .new-vacancy__label {
   display: block;
-  margin-bottom: .25rem;
+  margin-bottom: .4rem;
 }
 
 .new-vacancy__title {

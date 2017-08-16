@@ -6,19 +6,23 @@
 
   &__form-control {
     background-color: #FFFFFF;
-    border:           solid 1px $dark-green;
+    border:           none;
+    box-shadow:       0 1px 1px $dark-green;
     display:          block;
     padding:          6px 12px;
     width:            100%;
     
     &[type="button"] {
-      cursor: pointer;
+      color:           #000000;
+      cursor:          pointer;
+      text-align:      center;
+      text-decoration: none;
     }
   }
 
   &__label {
     display: block;
-    margin-bottom: .25rem;
+    margin-bottom: .4rem;
   }
 
   &__title {

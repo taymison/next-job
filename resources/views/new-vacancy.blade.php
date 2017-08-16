@@ -12,19 +12,23 @@
         <header class="header">
             <div class="wrapper">
                 <a href="{{ url('/') }}">
-                    <div class="logo logo--black logo--centered-until-small logo--small">Next Job</div>
+                    <div class="logo logo--green logo--small">Next Job</div>
+                </a>
+                <a href="{{ url('/') }}" title="Back to menu">
+                    <img class="header__menu-icon" src="{{ asset('img/icons/menu.svg') }}" alt="Menu">
                 </a>
             </div>
         </header>
         <section class="new-vacancy">
-            <div class="wrapper">
+            <div class="wrapper wrapper--large-padding">
                 <h1 class="new-vacancy__title">New Vacancy</h1>
-                <h2 class="new-vacancy__subtitle">Step 1 - Select a company</h2>
-                <div class="new-vacancy__companies-exist">
-                    <form action="">
+                <form id="form-create-vacancy" action="">
+                    <h2 class="new-vacancy__subtitle">Step 1 - Select a company</h2>
+                    <div class="new-vacancy__companies-exist">
+
                         <label class="new-vacancy__label" for="company">Select a company</label>
-                        <select class="new-vacancy__form-control" name="company" id="company">
-                            <option value="0">None</option>
+                        <select class="new-vacancy__form-control" name="company" id="company" required>
+                            <option value="" selected>- No company selected -</option>
                             <option value="1">AAA</option>
                             <option value="2">BBB</option>
                             <option value="3">CCC</option>
@@ -32,20 +36,21 @@
                         <br>
                         <div class="row row--space-between">
                             <div class="row__col">
-                                <input class="new-vacancy__form-control" type="button" value="Edit companies">
+                                <a class="new-vacancy__form-control" type="button">Edit companies</a>
                             </div>
                             <div class="row__col">
-                                <input class="new-vacancy__form-control" type="button" value="Create a company">
+                                <a href="#" class="new-vacancy__form-control" type="button">Create a company</a>
                             </div>
                         </div>
-                    </form>
-                </div>
-                <div class="new-vacancy__companies-not-exist">
-                    <input class="new-vacancy__form-control" type="button" value="Create a company">
-                </div>
-                <br>
-                <h2>Step 2 - Create a vacancy</h2>
-                <form action="">
+
+                    </div>
+                    <div class="new-vacancy__companies-not-exist">
+                        <a class="new-vacancy__form-control" type="button">Create a company<a/>
+                    </div>
+                    <br>
+                    <br>
+                    <h2>Step 2 - Create a vacancy</h2>
+
                     <label class="new-vacancy__label" for="vacancy-name">Vacancy name</label>
                     <input class="new-vacancy__form-control" id="vacancy-name" type="text" name="vacancy-name">
                     <br>
@@ -54,10 +59,10 @@
                     <br>
                     <div class="row row--space-between">
                         <div class="row__col">
-                            <input class="new-vacancy__form-control" type="button" value="Cancel">
+                            <a class="new-vacancy__form-control" type="button" href="/">Cancel</a>
                         </div>
                         <div class="row__col">
-                            <input class="new-vacancy__form-control" type="button" value="Register">
+                            <input class="new-vacancy__form-control" type="submit" value="Register">
                         </div>
                     </div>
                 </form>
@@ -65,5 +70,6 @@
         </section>
         <br>
         @include('components.footer')
+        <script src="{{ asset('js/new-vacancy.js') }}"></script>
     </body>
 </html>
