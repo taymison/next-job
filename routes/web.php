@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
-
-Route::get('/vacancy', function () {
-    return view('new-vacancy');
-});
+Route::get('/', 'VacancyController@menu')->name('menu');
+Route::get('/vacancy', 'VacancyController@formNewVacancy')->name('form-new-vacancy');
+Route::post('/vacancy', 'VacancyController@newVacancy')->name('new-vacancy');

@@ -767,10 +767,6 @@ body {
   width: 40px;
 }
 
-.new-vacancy__companies-not-exist {
-  display: none;
-}
-
 .new-vacancy__form-control {
   background-color: #FFFFFF;
   border: none;

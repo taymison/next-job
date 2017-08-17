@@ -11,10 +11,10 @@
     <body>
         <header class="header">
             <div class="wrapper">
-                <a href="{{ url('/') }}">
+                <a href="{{ route('menu') }}">
                     <div class="logo logo--green logo--small">Next Job</div>
                 </a>
-                <a href="{{ url('/') }}" title="Back to menu">
+                <a href="{{ route('menu') }}" title="Back to menu">
                     <img class="header__menu-icon" src="{{ asset('img/icons/menu.svg') }}" alt="Menu">
                 </a>
             </div>
@@ -23,39 +23,53 @@
             <div class="wrapper wrapper--large-padding">
                 <h1 class="new-vacancy__title">New Vacancy</h1>
                 <form id="form-create-vacancy" action="">
-                    <h2 class="new-vacancy__subtitle">Step 1 - Select a company</h2>
-                    <div class="new-vacancy__companies-exist">
-
-                        <label class="new-vacancy__label" for="company">Select a company</label>
-                        <select class="new-vacancy__form-control" name="company" id="company" required>
-                            <option value="" selected>- No company selected -</option>
-                            <option value="1">AAA</option>
-                            <option value="2">BBB</option>
-                            <option value="3">CCC</option>
-                        </select>
-                        <br>
-                        <div class="row row--space-between">
-                            <div class="row__col">
-                                <a class="new-vacancy__form-control" type="button">Edit companies</a>
-                            </div>
-                            <div class="row__col">
-                                <a href="#" class="new-vacancy__form-control" type="button">Create a company</a>
+                    {{ csrf_field() }}
+                    @if (isset($companies))
+                        <h2 class="new-vacancy__subtitle">Step 1 - Select a company</h2>
+                        <div class="new-vacancy__companies-exist">
+                            <label class="new-vacancy__label" for="company">Select a company</label>
+                            <select class="new-vacancy__form-control" name="company_id" id="company" required>
+                                <option value="" selected>- No company selected -</option>
+                                @foreach ($companies as $company)
+                                    <option value="{{ $company->id }}">{{ $company->name }}</option>
+                                @endforeach
+                            </select>
+                            <br>
+                            <div class="row row--space-between">
+                                <div class="row__col">
+                                    <a class="new-vacancy__form-control" type="button">Edit companies</a>
+                                </div>
+                                <div class="row__col">
+                                    <a href="#" class="new-vacancy__form-control" type="button">Create a company</a>
+                                </div>
                             </div>
                         </div>
-
-                    </div>
-                    <div class="new-vacancy__companies-not-exist">
-                        <a class="new-vacancy__form-control" type="button">Create a company<a/>
-                    </div>
+                    @else
+                        <h2 class="new-vacancy__subtitle">Step 1 - Create a company</h2>
+                        <div class="new-vacancy__companies-not-exist">
+                            <a class="new-vacancy__form-control" type="button">Create a company</a>
+                        </div>
+                    @endif
                     <br>
                     <br>
                     <h2>Step 2 - Create a vacancy</h2>
-
-                    <label class="new-vacancy__label" for="vacancy-name">Vacancy name</label>
-                    <input class="new-vacancy__form-control" id="vacancy-name" type="text" name="vacancy-name">
+                    <label class="new-vacancy__label" for="vacancy-name">Name</label>
+                    <input class="new-vacancy__form-control" id="vacancy-name" type="text" name="name" required>
                     <br>
-                    <label class="new-vacancy__label" for="vacancy-description">Vacancy description</label>
-                    <textarea class="new-vacancy__form-control" name="vacancy-description" id="vacancy-description" cols="15" rows="5"></textarea>
+                    <label class="new-vacancy__label" for="vacancy-description">Description</label>
+                    <textarea class="new-vacancy__form-control" name="description" id="vacancy-description" cols="15" rows="5" required></textarea>
+                    <br>
+                    <label class="new-vacancy__label" for="vacancy-link">Link</label>
+                    <input class="new-vacancy__form-control" type="url" name="link" required>
+                    <br>
+                    <label class="new-vacancy__label" for="vacancy-status">Status</label>
+                    <select class="new-vacancy__form-control" name="status" id="vacancy-status" required>
+                        <option value="open" selected>Open</option>
+                        <option value="resume submitted">Resume submitted</option>
+                        <option value="scheduled interview">Scheduled interview</option>
+                        <option value="performed interview">Performed interview</option>
+                        <option value="closde">Closed</option>
+                    </select>
                     <br>
                     <div class="row row--space-between">
                         <div class="row__col">
@@ -70,6 +84,5 @@
         </section>
         <br>
         @include('components.footer')
-        <script src="{{ asset('js/new-vacancy.js') }}"></script>
     </body>
 </html>

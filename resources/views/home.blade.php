@@ -10,17 +10,17 @@
     </head>
     <body>
         <header class="header--taller">
-            <a href="{{ url('/') }}">
+            <a href="{{ route('menu') }}">
                 <div class="logo logo--centered">Next Job</div>
             </a>
         </header>
         <div class="row row--column-direction wrapper">
             <div class="row__col option option--skewed">
-                <a href="{{ url('vacancy') }}">
+                <a href="{{ route('form-new-vacancy') }}">
                     <img class="option__icon" src="{{ asset('img/icons/add.svg') }}" alt="New vacancy">
                 </a>
                 <p class="option__text">
-                    <a href="{{ url('vacancy') }}">New vacancy</a>
+                    <a href="{{ route('form-new-vacancy') }}">New vacancy</a>
                 </p>
             </div>
             <div class="row__col option option--skewed">
