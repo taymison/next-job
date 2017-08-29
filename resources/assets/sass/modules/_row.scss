@@ -1,12 +1,28 @@
 .row {
-  display:        flex;
-  flex-direction: column;
-
-  @include atMedium {
-    flex-direction: row;
-  }
+  display: flex;
 
   &__col {
     flex-grow: 1;
+  }
+
+  &--column-direction {
+    flex-direction: column;
+
+    @include atMedium {
+      flex-direction: row;
+    }
+  }
+
+  &--space-between > &__col {
+    margin-left:  2px;
+    margin-right: 2px;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
   }
 }

@@ -2,8 +2,8 @@
   margin-left:   auto;
   margin-right:  auto;
   max-width:     1200px;
-  padding-left:  0rem;
-  padding-right: 0rem;
+  padding-left:  1rem;
+  padding-right: 1rem;
 
   @include atMedium {
     padding-left:  2rem;
@@ -13,5 +13,10 @@
   @include atLarge {
     padding-left:  5rem;
     padding-right: 5rem;
+
+    &--large-padding {
+      padding-left:  15rem;
+      padding-right: 15rem;
+    }
   }
 }

@@ -38,7 +38,7 @@ $factory->define(App\Vacancy::class, function (Faker\Generator $faker) {
             'open',
             'resume submitted',
             'scheduled interview',
-            'scheduled performed',
+            'performed interview',
             'closed',
         ]),
         'link' => $faker->url,

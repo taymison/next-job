@@ -76,7 +76,7 @@ module.exports = __webpack_require__(3);
 /***/ (function(module, __webpack_exports__) {
 
 "use strict";
-throw new Error("Module build failed: Error: ENOENT: no such file or directory, open '/media/taymison/Taymison/PHP/Next Job/next-job/resources/assets/js/new-vacancy.js'\n    at Error (native)");
+// import $ from 'jquery';
 
 /***/ }),
 /* 2 */,

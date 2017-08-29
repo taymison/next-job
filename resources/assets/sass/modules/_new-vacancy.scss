@@ -1,0 +1,28 @@
+.new-vacancy {
+  min-height: 100vh;
+
+  &__form-control {
+    background-color: #FFFFFF;
+    border:           none;
+    box-shadow:       0 1px 1px $dark-green;
+    display:          block;
+    padding:          6px 12px;
+    width:            100%;
+    
+    &[type="button"] {
+      color:           #000000;
+      cursor:          pointer;
+      text-align:      center;
+      text-decoration: none;
+    }
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: .4rem;
+  }
+
+  &__title {
+    text-align: center;
+  }
+}

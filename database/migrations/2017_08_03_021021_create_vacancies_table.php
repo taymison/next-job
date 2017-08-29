@@ -25,7 +25,7 @@ class CreateVacanciesTable extends Migration
                 'open',
                 'resume submitted',
                 'scheduled interview',
-                'scheduled performed',
+                'performed interview',
                 'closed',
             ]);
             $table->foreign('company_id')

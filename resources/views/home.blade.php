@@ -9,19 +9,24 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
     </head>
     <body>
-        <header>
-            <div class="logo logo--centered">Next Job</div>
+        <header class="header--taller">
+            <a href="{{ route('menu') }}">
+                <div class="logo logo--centered">Next Job</div>
+            </a>
         </header>
-        <div class="row wrapper">
+        <div class="row row--column-direction wrapper">
             <div class="row__col option option--skewed">
-                <a href="#">
+                <a href="{{ route('form-new-vacancy') }}">
                     <img class="option__icon" src="{{ asset('img/icons/add.svg') }}" alt="New vacancy">
                 </a>
                 <p class="option__text">
-                    <a href="#">New vacancy</a>
+                    <a href="{{ route('form-new-vacancy') }}">New vacancy</a>
                 </p>
             </div>
             <div class="row__col option option--skewed">
+                <div class="option__coming-soon">
+                    <p>Coming soon</p>
+                </div>
                 <a href="#">
                     <img class="option__icon" src="{{ asset('img/icons/list.svg') }}" alt="Vacancies">
                 </a>
@@ -41,13 +46,6 @@
                 </p>
             </div>
         </div>
-        <footer class="footer">
-            <div class="wrapper">
-                <p class="footer__text">
-                    <a href="https://github.com/taymison" target="_blank">Created with <span class="footer__heart-symbol">❤</span> by Taymison</a>
-                </p>
-            </div>
-        </footer>
-        <script src="{{ asset('js/app.js') }}"></script>
+        @include('components.footer', ['modifiers' => 'footer--b-0'])
     </body>
 </html>

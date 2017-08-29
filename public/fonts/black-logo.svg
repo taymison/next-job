@@ -26,7 +26,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="5.6568543"
-     inkscape:cx="39.010319"
+     inkscape:cx="28.576178"
      inkscape:cy="28.333817"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -72,7 +72,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -83,7 +83,7 @@
      transform="translate(-176.74286,-371.7107)">
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:40.00103378px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;font-size:40.00103378px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#008500;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
        x="174.10773"
        y="399.24054"
        id="text3336"
@@ -99,7 +99,7 @@
          id="tspan3340" /></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:40.96802521px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;font-size:40.96802521px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#008500;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
        x="171.9265"
        y="438.12427"
        id="text3342"
@@ -110,9 +110,9 @@
          x="171.9265"
          y="438.12427">JOB</tspan></text>
     <path
-       style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:1.44595468px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:none;fill-rule:evenodd;stroke:#008500;stroke-width:1.446;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
        d="M 82.302734 10.560547 L 82.296875 44.322266 L 115.45508 27.982422 L 82.302734 10.560547 z "
-       transform="translate(176.74286,371.7107)"
-       id="path3352" />
+       id="path3352"
+       transform="translate(176.74286,371.7107)" />
   </g>
 </svg>

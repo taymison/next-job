@@ -1,10 +1,15 @@
 .footer {
   background-color: $dark-green;
-  position:         absolute;
+  padding-bottom:   .05em;
+  padding-top:      .05em;
   width:            100%;
 
   @include atMedium {
-    bottom: 0;
+
+    &--b-0 {
+      bottom:   0;
+      position: absolute;
+    }
   }
 
   &__text {
