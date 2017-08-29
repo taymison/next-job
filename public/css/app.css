@@ -718,13 +718,15 @@ body {
 
 .footer {
   background-color: #008500;
-  position: absolute;
+  padding-bottom: .05em;
+  padding-top: .05em;
   width: 100%;
 }
 
 @media (min-width: 768px) {
   .footer--b-0 {
     bottom: 0;
+    position: absolute;
   }
 }
 
@@ -765,6 +767,10 @@ body {
   padding-bottom: .25rem;
   padding-top: .25rem;
   width: 40px;
+}
+
+.new-vacancy {
+  min-height: 100vh;
 }
 
 .new-vacancy__form-control {
