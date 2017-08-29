@@ -31,5 +31,9 @@ class VacancyController extends Controller
             'link' => 'required|url',
             'company_id' => 'required|numeric'
         ]);
+
+        Company::create($request->all());
+
+        return view('home');
     }
 }
