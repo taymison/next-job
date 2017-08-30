@@ -20,6 +20,7 @@ class Vacancy extends Model
         'link',
         'date',
         'status',
+        'company_id',
     ];
 
     public function company()
