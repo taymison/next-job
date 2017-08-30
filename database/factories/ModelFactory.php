@@ -26,7 +26,7 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 $factory->define(App\Company::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->company,
-        'link' => $faker->domainName,
+        'site' => $faker->domainName,
     ];
 });
 
@@ -34,13 +34,7 @@ $factory->define(App\Vacancy::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->jobTitle,
         'description' => $faker->catchPhrase,
-        'status' => $faker->randomElement([
-            'open',
-            'resume submitted',
-            'scheduled interview',
-            'performed interview',
-            'closed',
-        ]),
+        'status' => $faker->randomElement(App\Vacancy::$possible_status),
         'link' => $faker->url,
         'company_id' => function () {
             return App\Company::inRandomOrder()->first()->id;

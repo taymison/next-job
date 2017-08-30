@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
+use App\Vacancy;
+
 class CreateVacanciesTable extends Migration
 {
     /**
@@ -21,13 +23,7 @@ class CreateVacanciesTable extends Migration
             $table->string('name', 128);
             $table->text('description');
             $table->timestamp('date');
-            $table->enum('status', [
-                'open',
-                'resume submitted',
-                'scheduled interview',
-                'performed interview',
-                'closed',
-            ]);
+            $table->enum('status', App\Vacancy::$possible_status);
             $table->foreign('company_id')
                 ->references('id')
                 ->on('companies')
