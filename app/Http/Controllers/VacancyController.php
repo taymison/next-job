@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 
 use App\Company;
+use App\Vacancy;
 
 class VacancyController extends Controller
 {
@@ -26,7 +27,7 @@ class VacancyController extends Controller
             'description' => 'required',
             'status' => [
                 'required',
-                Rule::in(['open', 'resume submitted', 'scheduled interview', 'performed interview', 'closed'])
+                Rule::in([Vacancy::possible_status])
             ],
             'link' => 'required|url',
             'company_id' => 'required|numeric'

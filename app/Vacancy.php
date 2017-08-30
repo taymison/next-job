@@ -6,7 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Vacancy extends Model
 {
-    public $timestamps = false;
+    public $timestamps = false;    
+    public static $possible_status = [
+        'open',
+        'resume submitted',
+        'scheduled interview',
+        'performed interview',
+        'closed',
+    ];
     protected $fillable = [
         'name',
         'description',
