@@ -22,7 +22,7 @@
         <section class="new-vacancy">
             <div class="wrapper wrapper--large-padding">
                 <h1 class="new-vacancy__title">New Vacancy</h1>
-                <form id="form-create-vacancy" action="">
+                <form id="form-create-vacancy" action="{{ route('new-vacancy') }}" method="post">
                     {{ csrf_field() }}
                     @if (isset($companies))
                         <h2 class="new-vacancy__subtitle">Step 1 - Select a company</h2>
