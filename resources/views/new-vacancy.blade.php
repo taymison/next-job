@@ -34,6 +34,7 @@
                                     <option value="{{ $company->id }}">{{ $company->name }}</option>
                                 @endforeach
                             </select>
+                            @include('components.form-message-error', ['field' => 'company_id'])
                             <br>
                             <div class="row row--space-between">
                                 <div class="row__col">
@@ -55,12 +56,15 @@
                     <h2>Step 2 - Create a vacancy</h2>
                     <label class="new-vacancy__label" for="vacancy-name">Name</label>
                     <input class="new-vacancy__form-control" id="vacancy-name" type="text" name="name" placeholder="Name of vacancy" required>
+                    @include('components.form-message-error', ['field' => 'name'])
                     <br>
                     <label class="new-vacancy__label" for="vacancy-description">Description</label>
                     <textarea class="new-vacancy__form-control" name="description" id="vacancy-description" cols="15" rows="5" placeholder="Short description of vacancy" required></textarea>
+                    @include('components.form-message-error', ['field' => 'description'])
                     <br>
                     <label class="new-vacancy__label" for="vacancy-link">Link</label>
                     <input class="new-vacancy__form-control" type="url" name="link" placeholder="https://www.vacancy.com" required>
+                    @include('components.form-message-error', ['field' => 'link'])
                     <br>
                     <label class="new-vacancy__label" for="vacancy-status">Status</label>
                     <select class="new-vacancy__form-control" name="status" id="vacancy-status" required>
@@ -68,6 +72,7 @@
                             <option value="{{ $status }}">{{ ucfirst($status) }}</option>
                         @endforeach
                     </select>
+                    @include('components.form-message-error', ['field' => 'status'])
                     <br>
                     <div class="row row--space-between">
                         <div class="row__col">
