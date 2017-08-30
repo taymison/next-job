@@ -64,11 +64,9 @@
                     <br>
                     <label class="new-vacancy__label" for="vacancy-status">Status</label>
                     <select class="new-vacancy__form-control" name="status" id="vacancy-status" required>
-                        <option value="open" selected>Open</option>
-                        <option value="resume submitted">Resume submitted</option>
-                        <option value="scheduled interview">Scheduled interview</option>
-                        <option value="performed interview">Performed interview</option>
-                        <option value="closde">Closed</option>
+                        @foreach ($possible_status as $status)
+                            <option value="{{ $status }}">{{ ucfirst($status) }}</option>
+                        @endforeach
                     </select>
                     <br>
                     <div class="row row--space-between">
