@@ -31,7 +31,7 @@
                             <select class="new-vacancy__form-control" name="company_id" id="company" required>
                                 <option value="" selected>- No company selected -</option>
                                 @foreach ($companies as $company)
-                                    <option value="{{ $company->id }}">{{ $company->name }}</option>
+                                    <option value="{{ $company->id }}" @if ($company->id == old('company_id')) {{ 'selected' }} @endif>{{ $company->name }}</option>
                                 @endforeach
                             </select>
                             @include('components.form-message-error', ['field' => 'company_id'])
@@ -55,21 +55,21 @@
                     <br>
                     <h2>Step 2 - Create a vacancy</h2>
                     <label class="new-vacancy__label" for="vacancy-name">Name</label>
-                    <input class="new-vacancy__form-control" id="vacancy-name" type="text" name="name" placeholder="Name of vacancy" required>
+                    <input class="new-vacancy__form-control" id="vacancy-name" type="text" name="name" placeholder="Name of vacancy" value="{{ old('name') }}" required>
                     @include('components.form-message-error', ['field' => 'name'])
                     <br>
                     <label class="new-vacancy__label" for="vacancy-description">Description</label>
-                    <textarea class="new-vacancy__form-control" name="description" id="vacancy-description" cols="15" rows="5" placeholder="Short description of vacancy" required></textarea>
+                    <textarea class="new-vacancy__form-control" name="description" id="vacancy-description" cols="15" rows="5" placeholder="Short description of vacancy" required>{{ old('description') }}</textarea>
                     @include('components.form-message-error', ['field' => 'description'])
                     <br>
                     <label class="new-vacancy__label" for="vacancy-link">Link</label>
-                    <input class="new-vacancy__form-control" type="url" name="link" placeholder="https://www.vacancy.com" required>
+                    <input class="new-vacancy__form-control" type="url" name="link" placeholder="https://www.vacancy.com" value="{{ old('link') }}" required>
                     @include('components.form-message-error', ['field' => 'link'])
                     <br>
                     <label class="new-vacancy__label" for="vacancy-status">Status</label>
                     <select class="new-vacancy__form-control" name="status" id="vacancy-status" required>
                         @foreach ($possible_status as $status)
-                            <option value="{{ $status }}">{{ ucfirst($status) }}</option>
+                            <option value="{{ $status }}" @if ($status == old('status')) {{ 'selected' }} @endif>{{ ucfirst($status) }}</option>
                         @endforeach
                     </select>
                     @include('components.form-message-error', ['field' => 'status'])
