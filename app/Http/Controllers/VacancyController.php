@@ -17,7 +17,10 @@ class VacancyController extends Controller
 
     public function formNewVacancy()
     {
-        return view('new-vacancy', ['companies' => Company::get()]);
+        return view('new-vacancy', [
+            'companies' => Company::get(),
+            'possible_status' => Vacancy::$possible_status,
+        ]);
     }
 
     public function newVacancy(Request $request)
@@ -27,13 +30,13 @@ class VacancyController extends Controller
             'description' => 'required',
             'status' => [
                 'required',
-                Rule::in([Vacancy::possible_status])
+                Rule::in(Vacancy::$possible_status)
             ],
             'link' => 'required|url',
             'company_id' => 'required|numeric'
         ]);
 
-        Company::create($request->all());
+        Vacancy::create($request->all());
 
         return view('home');
     }
