@@ -54,13 +54,13 @@
                     <br>
                     <h2>Step 2 - Create a vacancy</h2>
                     <label class="new-vacancy__label" for="vacancy-name">Name</label>
-                    <input class="new-vacancy__form-control" id="vacancy-name" type="text" name="name" required>
+                    <input class="new-vacancy__form-control" id="vacancy-name" type="text" name="name" placeholder="Name of vacancy" required>
                     <br>
                     <label class="new-vacancy__label" for="vacancy-description">Description</label>
-                    <textarea class="new-vacancy__form-control" name="description" id="vacancy-description" cols="15" rows="5" required></textarea>
+                    <textarea class="new-vacancy__form-control" name="description" id="vacancy-description" cols="15" rows="5" placeholder="Short description of vacancy" required></textarea>
                     <br>
                     <label class="new-vacancy__label" for="vacancy-link">Link</label>
-                    <input class="new-vacancy__form-control" type="url" name="link" required>
+                    <input class="new-vacancy__form-control" type="url" name="link" placeholder="https://www.vacancy.com" required>
                     <br>
                     <label class="new-vacancy__label" for="vacancy-status">Status</label>
                     <select class="new-vacancy__form-control" name="status" id="vacancy-status" required>
