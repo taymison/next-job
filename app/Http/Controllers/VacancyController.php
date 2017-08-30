@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Validation\Rule;
+use App\Http\Requests\NewVacancyRequest;
 
 use App\Company;
 use App\Vacancy;
@@ -23,21 +22,9 @@ class VacancyController extends Controller
         ]);
     }
 
-    public function newVacancy(Request $request)
+    public function newVacancy(NewVacancyRequest $request)
     {
-        $this->validate($request, [
-            'name' => 'required|max:128',
-            'description' => 'required',
-            'status' => [
-                'required',
-                Rule::in(Vacancy::$possible_status)
-            ],
-            'link' => 'required|url',
-            'company_id' => 'required|numeric'
-        ]);
-
         Vacancy::create($request->all());
-
         return view('home');
     }
 }
