@@ -38,17 +38,17 @@
                             <br>
                             <div class="row row--space-between">
                                 <div class="row__col">
-                                    <a class="new-vacancy__form-control" type="button">Edit companies</a>
+                                    <a href="{{ route('companies') }}" class="new-vacancy__form-control" type="button">Edit companies</a>
                                 </div>
                                 <div class="row__col">
-                                    <a href="#" class="new-vacancy__form-control" type="button">Create a company</a>
+                                    <a href="{{ route('companies') }}" class="new-vacancy__form-control" type="button">Create a company</a>
                                 </div>
                             </div>
                         </div>
                     @else
                         <h2 class="new-vacancy__subtitle">Step 1 - Create a company</h2>
                         <div class="new-vacancy__companies-not-exist">
-                            <a class="new-vacancy__form-control" type="button">Create a company</a>
+                            <a href="{{ route('companies') }}" class="new-vacancy__form-control" type="button">Create a company</a>
                         </div>
                     @endif
                     <br>
