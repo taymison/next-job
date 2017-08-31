@@ -1,5 +1,4 @@
-.new-vacancy {
-  min-height: 100vh;
+.form {
 
   &__form-control {
     background-color: #FFFFFF;
@@ -20,9 +19,5 @@
   &__label {
     display: block;
     margin-bottom: .4rem;
-  }
-
-  &__title {
-    text-align: center;
   }
 }
