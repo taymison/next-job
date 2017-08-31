@@ -16,3 +16,4 @@ Route::get('/vacancy', 'VacancyController@formNewVacancy')->name('form-new-vacan
 Route::post('/vacancy', 'VacancyController@newVacancy')->name('new-vacancy');
 
 Route::get('/companies', 'CompanyController@listCompanies')->name('companies');
+Route::post('/company', 'CompanyController@newCompany')->name('new-company');
