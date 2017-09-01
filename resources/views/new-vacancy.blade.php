@@ -73,7 +73,7 @@
                     <br>
                     <div class="row row--space-between">
                         <div class="row__col">
-                            <a class="form__form-control" type="button" href="/">Cancel</a>
+                            <a class="form__form-control" type="button" href="{{ route('new-vacancy') }}">Cancel</a>
                         </div>
                         <div class="row__col">
                             <input class="form__form-control" type="submit" value="Register">
