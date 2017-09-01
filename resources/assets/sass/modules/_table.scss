@@ -1,0 +1,36 @@
+.table {
+  border-collapse: collapse;
+  border-spacing:  0;
+  max-width:       100%;
+  width:           100%;
+
+  &__col {
+    border-bottom: .5px solid #FFFFFF;
+    padding:       .5rem;
+
+    &--title {
+      border-bottom-width: 2px;
+    }
+
+    &--align-left {
+      text-align: left;
+    }
+  }
+
+  tr:last-of-type {
+    .table__col {
+      border-bottom: none;
+    } 
+  }
+
+  &__icon {
+    display: block;
+    margin:  0 auto;
+    width:   1.25rem;
+  }
+}
+
+.responsive-table {
+  min-height: .01%;
+  overflow-x: auto;
+}

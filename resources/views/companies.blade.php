@@ -25,28 +25,32 @@
           @include('components.form-new-company')
           <br>
           <h2 class="main-section__subtitle">List of companies</h2>
-          <table style="width: 100%">
-            <tr>
-              <th>Name</th>
-              <th>Site</th>
-              <th>Edit</th>
-              <th>Delete</th>
-            </tr>
-            @foreach ($companies as $company)
+          <div class="responsive-table">
+            <table class="table">
               <tr>
-                <td>{{ $company->name }}</td>
-                <td><a href="{{ $company->site }}" target="_blank">{{ $company->site }}</a></td>
-                <td>
-                  <a href="{{ route('edit-company', ['id' => $company->id]) }}">
-                    <img src="{{ asset('img/icons/edit.svg') }}" width="20" style="margin: 0 auto; display: block">
-                  </a>
-                <td>
-                  <a href="{{ route('delete-company', ['id' => $company->id]) }}" onclick="return confirm('Are you sure delete {{ $company->name }}?')">
-                    <img src="{{ asset('img/icons/delete.svg') }}" width="20" style="margin: 0 auto; display: block">
-                  </a>
-              </tr>  
-            @endforeach
-          </table>
+                <th class="table__col table__col--title table__col--align-left">Name</th>
+                <th class="table__col table__col--title table__col--align-left">Site</th>
+                <th class="table__col table__col--title">Edit</th>
+                <th class="table__col table__col--title">Delete</th>
+              </tr>
+              @foreach ($companies as $company)
+                <tr>
+                  <td class="table__col">{{ $company->name }}</td>
+                  <td class="table__col">
+                    <a href="{{ $company->site }}" target="_blank">{{ $company->site }}</a>
+                  </td>
+                  <td class="table__col">
+                    <a href="{{ route('edit-company', ['id' => $company->id]) }}" title="Edit {{ $company->name }}">
+                      <img class="table__icon" src="{{ asset('img/icons/edit.svg') }}">
+                    </a>
+                  <td class="table__col">
+                    <a href="{{ route('delete-company', ['id' => $company->id]) }}" title="Delete {{ $company->name }}" onclick="return confirm('Are you sure delete {{ $company->name }}?\n\nWarning: this action can not be undone.\n')">
+                      <img class="table__icon" src="{{ asset('img/icons/delete.svg') }}">
+                    </a>
+                </tr>  
+              @endforeach
+            </table>
+          </div>
         </div>
       </section>
       <br>
