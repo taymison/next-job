@@ -9,16 +9,7 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
     </head>
     <body>
-        <header class="header">
-            <div class="wrapper">
-                <a href="{{ route('menu') }}">
-                    <div class="logo logo--green logo--small">Next Job</div>
-                </a>
-                <a href="{{ route('menu') }}" title="Back to menu">
-                    <img class="header__menu-icon" src="{{ asset('img/icons/menu.svg') }}" alt="Menu">
-                </a>
-            </div>
-        </header>
+        @include('components.header')
         <section class="main-section">
             <div class="wrapper wrapper--large-padding">
                 <h1 class="main-section__title">New Vacancy</h1>
