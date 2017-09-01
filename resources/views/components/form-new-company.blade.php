@@ -21,7 +21,7 @@
   <br>
   <div class="row row--space-between">
       <div class="row__col">
-          <a class="form__form-control" type="button" href="{{ route('companies') }}">Cancel</a>
+          <a class="form__form-control" type="button" href="{{ isset($company) ? route('companies') : route('new-vacancy') }}">Cancel</a>
       </div>
       <div class="row__col">
           <input class="form__form-control" type="submit" value="{{ isset($company) ? 'Update' : 'Register' }}">
