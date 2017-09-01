@@ -22,38 +22,29 @@
       <section class="main-section">
         <div class="wrapper wrapper--large-padding">
           <h1 class="main-section__title">Companies</h1>
-          <h2 class="main-section__subtitle">Create a company</h2>
-          <form class="form" id="new-company-form" action="{{ route('new-company') }}" method="post">
-            {{ csrf_field() }}
-            <label class="form__label" for="company-name">Name</label>
-            <input class="form__form-control" id="company-name" type="text" name="name" placeholder="Name of company" value="{{ old('name') }}" required>
-            @include('components.form-message-error', ['field' => 'name'])
-            <br>
-            <label class="form__label" for="company-site">Site</label>
-            <input class="form__form-control" id="company-site" type="url" name="site" placeholder="https://www.company.com" value="{{ old('site') }}" required>
-            @include('components.form-message-error', ['field' => 'site'])
-            <br>
-            <div class="row row--space-between">
-                <div class="row__col">
-                    <a class="form__form-control" type="button" href="/">Cancel</a>
-                </div>
-                <div class="row__col">
-                    <input class="form__form-control" type="submit" value="Register">
-                </div>
-            </div>
-          </form>
+          @include('components.form-new-company')
           <h2 class="main-section__subtitle">List of companies</h2>
-          <table>
+          <table style="width: 100%">
             <tr>
               <th>#</th>
               <th>Name</th>
               <th>Site</th>
+              <th>Edit</th>
+              <th>Delete</th>
             </tr>
             @foreach ($companies as $company)
               <tr>
                 <td>{{ $company->id }}</td>
                 <td>{{ $company->name }}</td>
-                <td>{{ $company->site }}</td>
+                <td><a href="{{ $company->site }}" target="_blank">{{ $company->site }}</a></td>
+                <td>
+                  <a href="{{ route('edit-company', ['id' => $company->id]) }}">
+                    <img src="{{ asset('img/icons/edit.svg') }}" width="20" style="margin: 0 auto; display: block">
+                  </a>
+                <td>
+                  <a href="{{ route('delete-company', ['id' => $company->id]) }}" onclick="return confirm('Are you sure delete {{ $company->name }}?')">
+                    <img src="{{ asset('img/icons/delete.svg') }}" width="20" style="margin: 0 auto; display: block">
+                  </a>
               </tr>  
             @endforeach
           </table>
