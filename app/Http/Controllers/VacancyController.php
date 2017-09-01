@@ -34,6 +34,6 @@ class VacancyController extends Controller
     public function newVacancy(NewVacancyRequest $request)
     {
         Vacancy::create($request->all());
-        return redirect('vacancy');
+        return redirect()->route('new-vacancy');
     }
 }
