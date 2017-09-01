@@ -46,6 +46,6 @@
                 </p>
             </div>
         </div>
-        @include('components.footer', ['modifiers' => 'footer--b-0'])
+        @include('components.footer', ['modify' => 'footer--b-0'])
     </body>
 </html>
