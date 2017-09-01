@@ -23,10 +23,10 @@
         <div class="wrapper wrapper--large-padding">
           <h1 class="main-section__title">Companies</h1>
           @include('components.form-new-company')
+          <br>
           <h2 class="main-section__subtitle">List of companies</h2>
           <table style="width: 100%">
             <tr>
-              <th>#</th>
               <th>Name</th>
               <th>Site</th>
               <th>Edit</th>
@@ -34,7 +34,6 @@
             </tr>
             @foreach ($companies as $company)
               <tr>
-                <td>{{ $company->id }}</td>
                 <td>{{ $company->name }}</td>
                 <td><a href="{{ $company->site }}" target="_blank">{{ $company->site }}</a></td>
                 <td>
