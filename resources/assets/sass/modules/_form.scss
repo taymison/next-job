@@ -20,4 +20,10 @@
     display: block;
     margin-bottom: .4rem;
   }
+
+  &__message-error {
+    color:       #FF0000;
+    margin-bottom: .5rem;
+    margin-top:    .5rem
+  }
 }
