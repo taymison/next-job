@@ -38,10 +38,7 @@
                             <br>
                             <div class="row row--space-between">
                                 <div class="row__col">
-                                    <a href="{{ route('companies') }}" class="form__form-control" type="button">Edit companies</a>
-                                </div>
-                                <div class="row__col">
-                                    <a href="{{ route('companies') }}" class="form__form-control" type="button">Create a company</a>
+                                    <a href="{{ route('companies') }}" class="form__form-control" type="button">Create or edit a company</a>
                                 </div>
                             </div>
                         </div>
