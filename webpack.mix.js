@@ -17,4 +17,5 @@ mix.js('resources/assets/js/new-vacancy.js', 'public/js')
         proxy: '127.0.0.1:8000',
         notify: false,
     })
-    .disableNotifications();
+    .disableNotifications()
+    .copyDirectory('resources/assets/img', 'public/img');
