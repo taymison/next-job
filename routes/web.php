@@ -17,3 +17,6 @@ Route::post('/vacancy', 'VacancyController@newVacancy')->name('new-vacancy');
 
 Route::get('/companies', 'CompanyController@listCompanies')->name('companies');
 Route::post('/company', 'CompanyController@newCompany')->name('new-company');
+Route::get('/company/delete/{id}', 'CompanyController@deleteCompany')->name('delete-company');
+Route::get('/comppany/{id}', 'CompanyController@editCompany')->name('edit-company');
+Route::put('/company', 'CompanyController@updateCompany')->name('update-company');
