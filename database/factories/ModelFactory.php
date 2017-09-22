@@ -32,7 +32,7 @@ $factory->define(App\Company::class, function (Faker\Generator $faker) {
 
 $factory->define(App\Vacancy::class, function (Faker\Generator $faker) {
     return [
-        'name' => $faker->jobTitle,
+        'title' => $faker->jobTitle,
         'description' => $faker->catchPhrase,
         'status' => $faker->randomElement(App\Vacancy::$possible_status),
         'link' => $faker->url,

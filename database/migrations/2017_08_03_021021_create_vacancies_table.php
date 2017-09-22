@@ -20,7 +20,7 @@ class CreateVacanciesTable extends Migration
                 ->unsigned();
             $table->integer('company_id')
                 ->unsigned();
-            $table->string('name', 128);
+            $table->string('title', 128);
             $table->text('description');
             $table->timestamp('date');
             $table->enum('status', App\Vacancy::$possible_status);

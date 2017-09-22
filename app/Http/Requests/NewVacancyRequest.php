@@ -26,7 +26,7 @@ class NewVacancyRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|max:128',
+            'title' => 'required|max:128',
             'description' => 'required',
             'status' => [
                 'required',

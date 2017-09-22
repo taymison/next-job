@@ -15,7 +15,7 @@ class Vacancy extends Model
         'closed',
     ];
     protected $fillable = [
-        'name',
+        'title',
         'description',
         'link',
         'date',

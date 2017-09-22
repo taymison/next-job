@@ -42,9 +42,9 @@
                     <br>
                     <br>
                     <h2>Step 2 - Create a vacancy</h2>
-                    <label class="form__label" for="vacancy-name">Name</label>
-                    <input class="form__form-control" id="vacancy-name" type="text" name="name" placeholder="Name of vacancy" value="{{ old('name') }}" required>
-                    @include('components.form-message-error', ['field' => 'name'])
+                    <label class="form__label" for="vacancy-title">Title</label>
+                    <input class="form__form-control" id="vacancy-name" type="text" name="title" placeholder="Title of vacancy" value="{{ old('title') }}" required>
+                    @include('components.form-message-error', ['field' => 'title'])
                     <br>
                     <label class="form__label" for="vacancy-description">Description</label>
                     <textarea class="form__form-control" name="description" id="vacancy-description" cols="15" rows="5" placeholder="Short description of vacancy" required>{{ old('description') }}</textarea>
